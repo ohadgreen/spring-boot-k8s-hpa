@@ -19,7 +19,10 @@ public class QueueConfig {
     public ActiveMQConnectionFactory activeMQConnectionFactory() {
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
         activeMQConnectionFactory.setBrokerURL(brokerUrl);
+        activeMQConnectionFactory.setUserName("artemis");
+        activeMQConnectionFactory.setPassword("artemispw!");
 
+        System.out.println("broker url: " + brokerUrl);
         return activeMQConnectionFactory;
     }
 
